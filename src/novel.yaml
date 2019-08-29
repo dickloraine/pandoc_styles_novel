@@ -1,0 +1,126 @@
+novel-base:
+  all:
+    preflight:
+      - ~/novel_scenes.py
+    command-line:
+      filter:
+        - ~/novel_new_page.py
+        - ~/novel_epigraph.py
+        - ~/novel_noindent.py
+        - ~/novel_alignment.py
+        - ~/novel_quote.py
+        - ~/novel_poem.py
+        - ~/novel_custom_styles.py
+    metadata:
+      poem-style: bottom
+      quote-style: bottom
+    scenes:
+      new-scene-style: default
+      new-scene-text: "* * *"
+      new-scene-image: false
+  pdf: &pdf-novel
+    command-line:
+      template: ~/novel.tex
+      top-level-division: chapter
+      toc: true
+      toc-depth: 3
+    metadata:
+      documentclass: scrbook
+      DIV: calc
+      paper: 6in:9in
+      BCOR: 2mm
+      center-headings: true
+      fontsize: 10pt
+      mainfont: Adobe Garamond Pro
+      sansfont: Verdana
+      pagestyle: plain
+      pdf-cover: false
+      headsepline: false
+      footsepline: false
+      noindent: false
+      toc-dots: false
+  latex: *pdf-novel
+  epub:
+    preflight:
+      - ~/novel_dedication.py
+      - ~/novel_copyrights.py
+    sass:
+      files: 
+        - ~/novel_epub.scss
+      output-path: temp
+  html:
+    command-line:
+      toc: true
+    preflight:
+      - ~/novel_dedication.py
+      - ~/novel_copyrights.py
+    sass:
+      files: 
+        - ~/novel.scss
+      variables:
+        indent: true
+    replace-in-template:
+      - pattern: \$body\$
+        replacement-text: |
+          <div class="content">
+          $body$
+          </div>
+
+novel:
+  inherits:
+    - novel-base
+    - novel-navbar
+    - novel-widows
+
+novel-self-contained: &novel
+  inherits:
+    - novel-base
+    - novel-navbar
+    - novel-widows
+    - novel-html-self-contained
+
+novel-navbar:
+  html:
+    sass:
+      files: 
+        - ~/novel_navigation.scss
+      variables:
+        nav-top: false
+        nav-font-size: 11pt
+        nav-media-breakpoint: 600px
+        nav-sub-nav-width: 200px
+        nav-background-color: "#FFFFFF"
+        nav-hover-background-color: "#555"
+        nav-text-color: "#000000"
+        nav-hover-text-color: "#FFFFFF"
+    replace-in-template:
+      - pattern: \$table-of-contents\$
+        replacement-text: |
+          <div id="navbar">
+          <input class="trigger" type="checkbox" id="mainNavButton">
+          <label for="mainNavButton" onclick></label>
+          $table-of-contents$
+          </div>
+
+novel-navbar-top:
+  inherits: novel-navbar
+  html:
+    sass:
+      variables:
+        nav-top: true
+
+novel-html-self-contained:
+  html:
+    command-line:
+      self-contained: true
+    sass:
+      output-path: temp
+
+novel-widows:
+  pdf:
+    template-variables:
+      header-includes:
+        - |
+          \widowpenalties=3 10000 10000 150
+
+Default: *novel

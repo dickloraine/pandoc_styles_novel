@@ -1,0 +1,437 @@
+$media-breakpoint: 600px !default;
+$body-max-width: 800px !default;
+$base-font-size: 12pt !default;
+$media-font-size: 10pt !default;
+$heading-alignment: left !default;
+
+$title-font: "Oswald", sans-serif !default;
+$author-font: "Oswald", sans-serif !default;
+$header-font: "Noto Sans", sans-serif !default;
+$mono-font: "Fira Code", monospace !default;
+$body-font: "Noto Serif", serif !default;
+
+$indent: false !default;
+$paper-box: true !default;
+$footnote-highlight: "true" !default;
+$footnote-highlight-color: #ffa !default;
+$table-hover: "true" !default;
+$table-hover-color: #ffa !default;
+
+
+body {
+	max-width: $body-max-width;
+	padding-top: 2em;
+	font-family: $body-font;
+	font-size: $media-font-size;
+	text-align: justify;
+	margin: 3em auto 0 auto;
+}
+
+.content {
+  margin: 1em;
+  padding-bottom: 2em;
+}
+
+@media only screen and (min-width: $media-breakpoint) {
+  body {
+    font-size: $base-font-size;
+    @if $paper-box == true {
+      box-shadow: 1px 4px 14px #888;
+    }
+  }
+  .content {
+    margin: 1em 3em 3em 3em;
+  }
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: $header-font;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 1.5em;
+	text-align: $heading-alignment;
+	font-weight: bold;
+	page-break-before: always;
+	text-indent: 0;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1.2em;
+	page-break-before: auto;
+}
+
+@if $indent == true {
+  p {
+    margin: 1em 0 0 0;
+    text-indent: 0;
+  }
+  p+p {
+    margin: 0;
+    text-indent: 1em;
+  }
+}
+@else {
+  p {
+    margin: 0;
+    text-indent: 0;
+  }
+  p+p {
+    margin-top: 1em;
+  }
+}
+
+a {
+	color: inherit;
+  text-decoration: underline dotted;
+	
+	.footnoteRef {
+		vertical-align: super;
+	}
+}
+
+@if $footnote-highlight == "true" {
+  *[id^='fn']:target {
+    background-color: $footnote-highlight-color;
+  }
+}
+
+.math {
+  font-family: $body-font;
+  font-size: 0.9em;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	th, td {
+		padding: 5px;
+	}
+	th {
+		border-bottom: 1px solid;
+	}
+	@if $table-hover == "true" {
+		tr:hover {
+			background-color: $table-hover-color;
+		}
+	}
+}
+
+.citation {
+  font-style: normal;
+}
+
+section.footnotes {
+  margin-top: 2em;
+}
+
+code {
+  font-family: $mono-font;
+  font-variant-ligatures: contextual;
+  font-feature-settings: "calt" 1;
+  font-size: 0.9em;
+}
+
+img.plot, img.dot, img.plantuml {
+	display: block;
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+figure {
+	text-align: center;
+	margin: 1em 0;
+	max-width: 100%;
+	max-height: 100%;
+	page-break-inside: avoid;
+	clear: both;
+
+	img {
+	max-height: 100%;
+	max-width: 100%;
+	}
+}
+
+figcaption {
+	text-indent: 0;
+	text-align: center;
+	font-style: italic;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+ol.toc {
+	padding: 0;
+	margin-left: 1em;
+}
+ol.toc li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+em,
+em em em,
+em em em em em {
+  font-style: italic;
+}
+
+em em,
+em em em em {
+  font-style: normal;
+}
+
+.DefinitionTerm{
+	margin: 0;
+	font-weight: bold;
+	text-indent: 0em;
+}
+
+.DefinitionDescription{
+	margin-left: 2em;
+	text-indent: 0em;
+}
+
+.date {
+  font-family: $author-font;
+	margin-top: 1em;
+	margin-bottom: 3em;
+	text-indent: 0em;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.author {
+  font-family: $author-font;
+	margin-top: 1em;
+	text-indent: 0em;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.main {
+  font-family: $title-font;
+	margin-top: 2em;
+	text-indent: 0em;
+	font-size: 1.6em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.title {
+  font-family: $title-font;
+	text-indent: 0em;
+	font-size: 1.6em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.subtitle {
+  font-family: $author-font;
+	margin-top: 1em;
+	text-indent: 0em;
+	font-size: 1.4em;
+	font-style: italic;
+	text-align: center;
+}
+
+.NewScene {
+	margin-top: .75em;
+	margin-bottom: .75em;
+	text-indent: 0;
+	text-align: center;
+	+p {
+	  text-indent: 0;
+	}
+  }
+  
+  .szeneimg {
+	width: 10%;
+	vertical-align: middle;
+  }
+  
+  .noindent {
+	margin: 0;
+	p {
+	  text-indent: 0;
+	}
+  }
+  
+  .align_left {
+	margin: 0;
+	p {
+	  text-align: left;
+	}
+  }
+  
+  .align_center {
+	margin: 0;
+	p {
+	  text-align: center;
+	}
+  }
+  
+  .align_right {
+	margin: 0;
+	p {
+	  text-align: right;
+	}
+  }
+  
+  .Poem {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	margin-left: 1em;
+	text-align: left;
+	.Stanza {
+	  page-break-inside: avoid;
+	}
+	p,
+	div {
+	  text-indent: -0.5em;
+	  margin-left: 1.5em;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	}
+	+p {
+	  text-indent: 0;
+	}
+	.PoemAuthor {
+	  font-style: italic;
+	  text-indent: 0;
+	  text-align: right;
+	}
+	.PoemTitle {
+	  font-weight: bold;
+	  text-indent: 0;
+	  text-align: right;
+	}
+	.PoemTitleTop {
+	  font-weight: bold;
+	  padding-left: 1.5em;
+	}
+	.PoemAuthorTop {
+	  font-style: italic;
+	  padding-left: 1.5em;
+	}
+	.PoemAuthorTop+.Stanza,
+	.PoemTitleTop+.Stanza {
+	  margin-top: 1em;
+	}
+	.PoemTitleTop+.PoemAuthorTop {
+	  padding-top: 0.2em;
+	}
+	.PoemSingle {
+	  text-indent: 0;
+	  text-align: right;
+	}
+  }
+  
+  .QuoteBlock {
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-indent: 0;
+	p {
+	  text-indent: 0;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	}
+	p+p {
+	  text-indent: 1.2em;
+	}
+	.QuoteAuthor {
+	  font-style: italic;
+	  text-indent: 0;
+	  text-align: right;
+	}
+	.QuoteScource {
+	  font-weight: bold;
+	  text-indent: 0;
+	  text-align: right;
+	}
+	.QuoteScourceTop {
+	  font-weight: bold;
+	  text-indent: 0;
+	  text-align: center;
+	}
+	.QuoteAuthorTop {
+	  font-style: italic;
+	  text-indent: 0;
+	  text-align: center;
+	}
+	.QuoteAuthorTop+p,
+	.QuoteScourceTop+p {
+	  padding-top: 1em;
+	}
+	.QuoteScourceTop+.QuoteAuthorTop {
+	  padding-top: 0.2em;
+	}
+	.QuoteSingle {
+	  text-indent: 0;
+	  text-align: right;
+	}
+  }
+  
+  .Epigraph {
+	margin-top: 0;
+	margin-bottom: 1em;
+	margin-left: 55%;
+	margin-right: 1em;
+	text-indent: 0;
+	text-align: left;
+	p {
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  text-indent: 0;
+	}
+	+p {
+	  text-indent: 0;
+	}
+	.EpigraphAuthor {
+	  font-style: italic;
+	  text-align: right;
+	  border-top: thin solid;
+	}
+  }
+  
+  .dedication {
+	color: black;
+	padding-top: 5em;
+	padding-left: 20%;
+	padding-right: 20%;
+	margin-bottom: 3em;
+	p {
+	  text-indent: 0em;
+	  text-align: center;
+	}
+  }
+  
+  .copyrights {
+	color: black;
+	padding-top: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	p {
+	  font-size: 0.8em;
+	  text-indent: 0em;
+	  text-align: center;
+	}
+  }
+  
+  .hidden {
+	color: transparent;
+  }  

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>pandoc_styles_novel</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">body {max-width: 800px;padding-top: 2em;font-family: "Noto Serif", serif;font-size: 10pt;text-align: justify;margin: 3em auto 0 auto;}.content {margin: 1em;padding-bottom: 2em;}@media only screen and (min-width: 600px) {body {font-size: 12pt;box-shadow: 1px 4px 14px #888;}.content {margin: 1em 3em 3em 3em;}}header {text-align: center;}h1 {font-family: "Noto Sans", sans-serif;margin-top: 1em;margin-bottom: 1em;font-size: 1.5em;text-align: left;font-weight: bold;page-break-before: always;text-indent: 0;}h2 {font-size: 1.3em;}h3 {font-size: 1.2em;page-break-before: auto;}p {margin: 0;text-indent: 0;}p + p {margin-top: 1em;}a {color: inherit;text-decoration: underline dotted;}a .footnoteRef {vertical-align: super;}*[id^='fn']:target {background-color: #ffa;}.math {font-family: "Noto Serif", serif;font-size: 0.9em;}blockquote {font-style: italic;}table {width: 100%;border-spacing: 0;}table th, table td {padding: 5px;}table th {border-bottom: 1px solid;}table tr:hover {background-color: #ffa;}.citation {font-style: normal;}section.footnotes {margin-top: 2em;}code {font-family: "Fira Code", monospace;font-variant-ligatures: contextual;font-feature-settings: "calt" 1;font-size: 0.9em;}img.plot, img.dot, img.plantuml {display: block;margin-left: auto;margin-right: auto;}figure {text-align: center;margin: 1em 0;max-width: 100%;max-height: 100%;page-break-inside: avoid;clear: both;}figure img {max-height: 100%;max-width: 100%;}figcaption {text-indent: 0;text-align: center;font-style: italic;padding-left: 1em;padding-right: 1em;}ol.toc {padding: 0;margin-left: 1em;}ol.toc li {list-style-type: none;margin: 0;padding: 0;}em,em em em,em em em em em {font-style: italic;}em em,em em em em {font-style: normal;}.DefinitionTerm {margin: 0;font-weight: bold;text-indent: 0em;}.DefinitionDescription {margin-left: 2em;text-indent: 0em;}.date {font-family: "Oswald", sans-serif;margin-top: 1em;margin-bottom: 3em;text-indent: 0em;font-size: 1.2em;text-align: center;}.author {font-family: "Oswald", sans-serif;margin-top: 1em;text-indent: 0em;font-size: 1.5em;text-align: center;}.main {font-family: "Oswald", sans-serif;margin-top: 2em;text-indent: 0em;font-size: 1.6em;font-weight: bold;text-align: center;}.title {font-family: "Oswald", sans-serif;text-indent: 0em;font-size: 1.6em;font-weight: bold;text-align: center;}.subtitle {font-family: "Oswald", sans-serif;margin-top: 1em;text-indent: 0em;font-size: 1.4em;font-style: italic;text-align: center;}.NewScene {margin-top: .75em;margin-bottom: .75em;text-indent: 0;text-align: center;}.NewScene + p {text-indent: 0;}.szeneimg {width: 10%;vertical-align: middle;}.noindent {margin: 0;}.noindent p {text-indent: 0;}.align_left {margin: 0;}.align_left p {text-align: left;}.align_center {margin: 0;}.align_center p {text-align: center;}.align_right {margin: 0;}.align_right p {text-align: right;}.Poem {margin-top: 1em;margin-bottom: 1em;margin-right: 1em;margin-left: 1em;text-align: left;}.Poem .Stanza {page-break-inside: avoid;}.Poem p,.Poem div {text-indent: -0.5em;margin-left: 1.5em;margin-top: 0;margin-bottom: 0;}.Poem + p {text-indent: 0;}.Poem .PoemAuthor {font-style: italic;text-indent: 0;text-align: right;}.Poem .PoemTitle {font-weight: bold;text-indent: 0;text-align: right;}.Poem .PoemTitleTop {font-weight: bold;padding-left: 1.5em;}.Poem .PoemAuthorTop {font-style: italic;padding-left: 1.5em;}.Poem .PoemAuthorTop + .Stanza,.Poem .PoemTitleTop + .Stanza {margin-top: 1em;}.Poem .PoemTitleTop + .PoemAuthorTop {padding-top: 0.2em;}.Poem .PoemSingle {text-indent: 0;text-align: right;}.QuoteBlock {margin-left: 2em;margin-right: 2em;margin-top: 1em;margin-bottom: 1em;text-indent: 0;}.QuoteBlock p {text-indent: 0;margin-top: 0;margin-bottom: 0;}.QuoteBlock p + p {text-indent: 1.2em;}.QuoteBlock .QuoteAuthor {font-style: italic;text-indent: 0;text-align: right;}.QuoteBlock .QuoteScource {font-weight: bold;text-indent: 0;text-align: right;}.QuoteBlock .QuoteScourceTop {font-weight: bold;text-indent: 0;text-align: center;}.QuoteBlock .QuoteAuthorTop {font-style: italic;text-indent: 0;text-align: center;}.QuoteBlock .QuoteAuthorTop + p,.QuoteBlock .QuoteScourceTop + p {padding-top: 1em;}.QuoteBlock .QuoteScourceTop + .QuoteAuthorTop {padding-top: 0.2em;}.QuoteBlock .QuoteSingle {text-indent: 0;text-align: right;}.Epigraph {margin-top: 0;margin-bottom: 1em;margin-left: 55%;margin-right: 1em;text-indent: 0;text-align: left;}.Epigraph p {margin-top: 0;margin-bottom: 0;text-indent: 0;}.Epigraph + p {text-indent: 0;}.Epigraph .EpigraphAuthor {font-style: italic;text-align: right;border-top: thin solid;}.dedication {color: black;padding-top: 5em;padding-left: 20%;padding-right: 20%;margin-bottom: 3em;}.dedication p {text-indent: 0em;text-align: center;}.copyrights {color: black;padding-top: 5%;padding-left: 5%;padding-right: 5%;}.copyrights p {font-size: 0.8em;text-indent: 0em;text-align: center;}.hidden {color: transparent;}#navbar {right: 1em;top: 3em;z-index: 1;margin: 0;text-align: left;padding: 0;position: fixed;overflow-y: auto;overflow-x: hidden;max-width: 350px;max-height: 95%;font-size: 11pt;}#navbar ul {display: none;width: 100%;list-style: none;margin: 0;background: #FFFFFF;}#navbar ul li {margin-right: 4em;}#navbar ul li a {display: block;padding: 0.3em;background: #FFFFFF;color: #000000;text-decoration: none;}#navbar ul li a:hover {color: #FFFFFF;background: #555;}#navbar input.trigger {position: absolute;top: -9999px;left: -9999px;}#navbar input.trigger:checked ~ ul,#navbar input.trigger:checked ~ ul li ul {display: block !important;}#navbar label {position: fixed;right: 0.5em;top: .2em;width: 1.2em;height: 1.2em;text-align: center;font-size: 2em;background: #FFFFFF;color: #000000;}#navbar label:after {content: "\2261";}#navbar label:hover {color: #FFFFFF;background: #555;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">pandoc_styles_novel</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<div id="navbar">
+<input class="trigger" type="checkbox" id="mainNavButton">
+<label for="mainNavButton" onclick></label>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#formating">Formating</a><ul>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#some-additional-tips">Some additional Tips</a></li>
+</ul></li>
+<li><a href="#metadata-options">Metadata options</a><ul>
+<li><a href="#copyrights">copyrights</a></li>
+<li><a href="#dedication">dedication</a></li>
+<li><a href="#example-metadata-block">Example metadata block</a></li>
+</ul></li>
+<li><a href="#list-of-styles">List of styles</a><ul>
+<li><a href="#align_center-align_right-align_left">align_center, align_right, align_left</a></li>
+<li><a href="#epigraph">epigraph</a></li>
+<li><a href="#new_scene">new_scene</a></li>
+<li><a href="#noindent">noindent</a></li>
+<li><a href="#poem">poem</a></li>
+<li><a href="#quote">quote</a></li>
+</ul></li>
+</ul>
+</div>
+
+</nav>
+<div class="content">
+<h2 id="introduction">Introduction</h2>
+<p>This style-pack gives you some additional ways to format your text, so that you can easily produce books for print and e-Readers.</p>
+<h2 id="formating">Formating</h2>
+<h3 id="usage">Usage</h3>
+<p>Markdown is used to format the book. You can use all functionality provided by <a href="http://pandoc.org/MANUAL.html#pandocs-markdown">pandocs markdown</a>. But while markdown excels at light markup, sometimes you need special formatting. Poems, epigraphs etc. are good examples. To make formatting these elements easy, this template comes with an easy to use syntax for many such elements. Each of this styles comes with one or more filters, which formats these elements according to the output format.</p>
+<p>The syntax is very easy. Either</p>
+<p><strong>Div-Syntax</strong></p>
+<pre><code>:::{.type .option key=value}
+The content that should be styled.
+:::</code></pre>
+<p>or</p>
+<p><strong>Code-Block-Syntax</strong></p>
+<pre><code>~~~{.type .option key=value}
+The content that should be styled.
+~~~</code></pre>
+<p>depending on the style used.</p>
+<p>Types and simple options are preceded by a dot, attributes consist of a name and a value. These options are separated by a simple space. If the value of an attribute contains spaces, you need to surround it with quotation marks.</p>
+<p>For example, this is how you would implement a poem:</p>
+<pre><code>~~~{.poem author=&quot;William Shakespeare&quot; title=&quot;Sonnet 18&quot;}
+Shall I compare thee to a summer&#39;s day?
+Thou art more lovely and more temperate:
+Rough winds do shake the darling buds of May,
+And summer&#39;s lease hath all too short a date:
+
+Sometime too hot the eye of heaven shines,
+And often is his gold complexion dimmed,
+And every fair from fair sometime declines,
+By chance, or nature&#39;s changing course untrimmed:
+
+But thy eternal summer shall not fade,
+Nor lose possession of that fair thou ow&#39;st,
+Nor shall death brag thou wand&#39;rest in his shade,
+When in eternal lines to time thou grow&#39;st,
+
+|       So long as men can breathe or eyes can see,
+|       So long lives this, and this gives life to thee.
+~~~</code></pre>
+<p>And this is what it looks rendered:</p>
+<div class="Poem">
+<p class="PoemTitleTop">Sonnet 18</p>
+<p class="PoemAuthorTop">William Shakespeare</p>
+<div class="Stanza">
+<p>Shall I compare thee to a summer’s day?</p>
+<p>Thou art more lovely and more temperate:</p>
+<p>Rough winds do shake the darling buds of May,</p>
+<p>And summer’s lease hath all too short a date:</p>
+</div>
+<p> </p>
+<div class="Stanza">
+<p>Sometime too hot the eye of heaven shines,</p>
+<p>And often is his gold complexion dimmed,</p>
+<p>And every fair from fair sometime declines,</p>
+<p>By chance, or nature’s changing course untrimmed:</p>
+</div>
+<p> </p>
+<div class="Stanza">
+<p>But thy eternal summer shall not fade,</p>
+<p>Nor lose possession of that fair thou ow’st,</p>
+<p>Nor shall death brag thou wand’rest in his shade,</p>
+<p>When in eternal lines to time thou grow’st,</p>
+</div>
+<p> </p>
+<div class="Stanza">
+<div class="line-block">      So long as men can breathe or eyes can see,</div>
+<div class="line-block">      So long lives this, and this gives life to thee.</div>
+</div>
+</div>
+<h3 id="some-additional-tips">Some additional Tips</h3>
+<p>You can use html style comments in your source files.</p>
+<pre><code>&lt;!-- This is a comment. --&gt;</code></pre>
+<p>You can add a curly bracket with “.unnumbered” or “-” inside it at the end of a heading, to exclude it from the automatic numbering, if you chose to use that.</p>
+<pre><code># Example Heading{.unnumbered}
+# Example Heading{-}</code></pre>
+<h2 id="metadata-options">Metadata options</h2>
+<p>You can modify many things about the output in the metadata of your book.</p>
+<p>Two special fields are introduced with this project:</p>
+<h3 id="copyrights">copyrights</h3>
+<p>You enter your copyrights text in this field.</p>
+<h3 id="dedication">dedication</h3>
+<p>If your book contains a dedication, enter it in this field.</p>
+<h3 id="example-metadata-block">Example metadata block</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="pp">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Alice&#39;s Adventures in Wonderland</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Lewis Carroll</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> en</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="fu">copyrights</span><span class="kw">:</span><span class="at"> This book is in the public domain.</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="fu">dedication</span><span class="kw">:</span><span class="at"> for Elise</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="fu">poem-style</span><span class="kw">:</span><span class="at"> top</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="fu">quote-style</span><span class="kw">:</span><span class="at"> top</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="co"># epub-cover</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="fu">cover-image</span><span class="kw">:</span><span class="at"> ./images/cover.jpg</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="co"># pdf options</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="fu">paper</span><span class="kw">:</span><span class="at"> 6in:9in</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="fu">BCOR</span><span class="kw">:</span><span class="at"> 2mm</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a><span class="fu">fontsize</span><span class="kw">:</span><span class="at"> 12pt</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="fu">mainfont</span><span class="kw">:</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="fu">sansfont</span><span class="kw">:</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a></span>
+<span id="cb6-20"><a href="#cb6-20"></a><span class="fu">output-name</span><span class="kw">:</span><span class="at"> Alices_Adventures_in_Wonderland</span></span>
+<span id="cb6-21"><a href="#cb6-21"></a><span class="fu">destination</span><span class="kw">:</span><span class="at"> ./dist</span></span>
+<span id="cb6-22"><a href="#cb6-22"></a><span class="fu">formats</span><span class="kw">:</span></span>
+<span id="cb6-23"><a href="#cb6-23"></a><span class="at">  </span><span class="kw">-</span><span class="at"> html</span></span>
+<span id="cb6-24"><a href="#cb6-24"></a><span class="at">  </span><span class="kw">-</span><span class="at"> epub</span></span>
+<span id="cb6-25"><a href="#cb6-25"></a><span class="at">  </span><span class="kw">-</span><span class="at"> pdf</span></span>
+<span id="cb6-26"><a href="#cb6-26"></a><span class="fu">style-file</span><span class="kw">:</span><span class="at"> ~/novel.yaml</span></span>
+<span id="cb6-27"><a href="#cb6-27"></a><span class="pp">---</span></span></code></pre></div>
+<h2 id="list-of-styles">List of styles</h2>
+<p>Below you find a description of each type provided with the template and which filter is used to render it. If no filter is given, it is named like the style. Some styles have options how they should look in the rendered book. You can change these in the metadata of your book.</p>
+<p>Most styles use the <strong>Div-Syntax</strong>. If no syntax is given, use that syntax. If they use the <strong>Code-Block-Syntax</strong> this is explicitly stated.</p>
+<h3 id="align_center-align_right-align_left">align_center, align_right, align_left</h3>
+<p>Text gets aligned accordingly inside the block.</p>
+<h3 id="epigraph">epigraph</h3>
+<p>Adds an epigraph.</p>
+<p>Attributes:</p>
+<ul>
+<li>author: The author of the epigraph</li>
+</ul>
+<h3 id="new_scene">new_scene</h3>
+<p>This style is an exception to all others. To make a new scene, just enter three ’*’ on one line surrounded by blank lines. Please note, that this overrides one default markdown command for a horizontal line. Just use <code>---</code> for horizontal lines.</p>
+<p>Example:</p>
+<pre><code>The last paragraph in the old scene.
+
+* * *
+
+The first paragraph in the new scene.</code></pre>
+<p>Render Options:</p>
+<ul>
+<li><p>default: A new scene is marked by blank space</p></li>
+<li><p>text: A new scene is marked by the text given, defaults to <code>* * *</code></p></li>
+<li><p>fleuron: A new scene is marked by an image. You need to provide an image in the options</p></li>
+</ul>
+<h3 id="noindent">noindent</h3>
+<p>The paragraph is not indented.</p>
+<h3 id="poem">poem</h3>
+<p>Uses the <strong>Code-Block-Syntax</strong></p>
+<p>Styles the content as a poem. There are three render options for this style, each just formatting the poem slightly different.</p>
+<p>Render Options:</p>
+<ul>
+<li><p>bottom: Title and author are positioned on the bottom right of the poem</p></li>
+<li><p>one-line: As above, but title and author appear on one line</p></li>
+<li><p>top: This filter inserts the title at the top of the poem</p></li>
+</ul>
+<p>Options:</p>
+<ul>
+<li><p>altverse: This option indents every other line in a stanza</p></li>
+<li><p>top: Positions the title on the top, regardless of the render option used</p></li>
+<li><p>bottom: Positions the title on the bottom, regardless of the render option used</p></li>
+<li><p>one-line: Positions author and title in one line on the bottom, regardless of the render option used</p></li>
+<li><p>noversewidth: Per default the filter calculates the best position for the poem. If you don’t want this, use this option</p></li>
+</ul>
+<p>Attributes:</p>
+<dl>
+<dt>author</dt>
+<dd>The author of the poem
+</dd>
+<dt>title</dt>
+<dd>The title of the poem
+</dd>
+<dt>poemlines</dt>
+<dd>Needs a number. Adds a line number every number of lines
+</dd>
+<dt>versewidth</dt>
+<dd>Needs a line of the poem, used to position the poem. Normally this is calculated automatically, use this, if you want to set it manually
+</dd>
+</dl>
+<h3 id="quote">quote</h3>
+<p>Styles the content as a quote. Of course markdown has its own syntax for quotes. You only need this style, if you want to include an author and/or a title.</p>
+<p>There are three render options for this style, each just formating the quote slightly different.</p>
+<p>Render Options:</p>
+<ul>
+<li><p>bottom: Title and author are positioned on the bottom right of the quote</p></li>
+<li><p>one-line: As above, but title and author appear on one line</p></li>
+<li><p>top: This filter inserts the title at the top of the quote</p></li>
+</ul>
+<p>Options:</p>
+<ul>
+<li><p>top: Positions the title on the top, regardless of the render option used</p></li>
+<li><p>bottom: Positions the title on the bottom, regardless of the render option used</p></li>
+<li><p>one-line: Positions author and title in one line on the bottom, regardless of the render option used</p></li>
+</ul>
+<p>Attributes:</p>
+<ul>
+<li><p>author: The author of the quote</p></li>
+<li><p>title: The title of the quote</p></li>
+</ul>
+</div>
+
+</body>
+</html>
