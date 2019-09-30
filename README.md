@@ -25,6 +25,6 @@ Install with:
 
 ## Documentation
 
-You can read the documentation here.
+You can read the documentation [here](https://dickloraine.github.io/pandoc_styles_novel/).
 
 The installation also includes the documentation in the docs folder inside the style-pack folder for this project.
