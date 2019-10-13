@@ -1,16 +1,16 @@
 novel-base:
   all:
     preflight:
-      - ~/novel_scenes.py
+      - novel@scenes.py
     command-line:
       filter:
-        - ~/novel_new_page.py
-        - ~/novel_epigraph.py
-        - ~/novel_noindent.py
-        - ~/novel_alignment.py
-        - ~/novel_quote.py
-        - ~/novel_poem.py
-        - ~/novel_custom_styles.py
+        - novel@new_page.py
+        - novel@epigraph.py
+        - novel@noindent.py
+        - novel@alignment.py
+        - novel@quote.py
+        - novel@poem.py
+        - novel@custom_styles.py
     metadata:
       poem-style: bottom
       quote-style: bottom
@@ -20,7 +20,7 @@ novel-base:
       new-scene-image: false
   pdf: &pdf-novel
     command-line:
-      template: ~/novel.tex
+      template: novel@novel.tex
       top-level-division: chapter
       toc: true
       toc-depth: 3
@@ -42,21 +42,21 @@ novel-base:
   latex: *pdf-novel
   epub:
     preflight:
-      - ~/novel_dedication.py
-      - ~/novel_copyrights.py
+      - novel@dedication.py
+      - novel@copyrights.py
     sass:
       files: 
-        - ~/novel_epub.scss
+        - novel@epub.scss
       output-path: temp
   html:
     command-line:
       toc: true
     preflight:
-      - ~/novel_dedication.py
-      - ~/novel_copyrights.py
+      - novel@dedication.py
+      - novel@copyrights.py
     sass:
       files: 
-        - ~/novel.scss
+        - novel@novel.scss
       variables:
         indent: true
     replace-in-template:
@@ -83,7 +83,7 @@ novel-navbar:
   html:
     sass:
       files: 
-        - ~/novel_navigation.scss
+        - novel@navigation.scss
       variables:
         nav-top: false
         nav-font-size: 11pt
