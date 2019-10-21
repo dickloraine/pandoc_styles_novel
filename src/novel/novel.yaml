@@ -123,4 +123,5 @@ novel-widows:
         - |
           \widowpenalties=3 10000 10000 150
 
-Default: *novel
+Default:
+  inherits: novel
