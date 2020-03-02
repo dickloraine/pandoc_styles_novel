@@ -2,43 +2,39 @@ novel-base:
   all:
     preflight:
       - novel@scenes.py
-    command-line:
-      filter:
-        - novel@new_page.py
-        - novel@epigraph.py
-        - novel@noindent.py
-        - novel@alignment.py
-        - novel@quote.py
-        - novel@poem.py
-        - novel@custom_styles.py
-    metadata:
-      poem-style: bottom
-      quote-style: bottom
+    filter:
+      - novel@new_page.py
+      - novel@epigraph.py
+      - novel@noindent.py
+      - novel@alignment.py
+      - novel@quote.py
+      - novel@poem.py
+      - novel@custom_styles.py
+    poem-style: bottom
+    quote-style: bottom
     scenes:
       new-scene-style: default
       new-scene-text: "* * *"
       new-scene-image: false
   pdf: &pdf-novel
-    command-line:
-      template: novel@novel.tex
-      top-level-division: chapter
-      toc: true
-      toc-depth: 3
-    metadata:
-      documentclass: scrbook
-      DIV: calc
-      paper: 6in:9in
-      BCOR: 2mm
-      center-headings: true
-      fontsize: 10pt
-      mainfont: Adobe Garamond Pro
-      sansfont: Verdana
-      pagestyle: plain
-      pdf-cover: false
-      headsepline: false
-      footsepline: false
-      noindent: false
-      toc-dots: false
+    template: novel@novel.tex
+    top-level-division: chapter
+    toc: true
+    toc-depth: 3
+    documentclass: scrbook
+    DIV: calc
+    paper: 6in:9in
+    BCOR: 2mm
+    center-headings: true
+    fontsize: 10pt
+    mainfont: Adobe Garamond Pro
+    sansfont: Verdana
+    pagestyle: plain
+    pdf-cover: false
+    headsepline: false
+    footsepline: false
+    noindent: false
+    toc-dots: false
   latex: *pdf-novel
   epub:
     preflight:
@@ -49,8 +45,7 @@ novel-base:
         - novel@epub.scss
       output-path: temp
   html:
-    command-line:
-      toc: true
+    toc: true
     preflight:
       - novel@dedication.py
       - novel@copyrights.py
@@ -111,17 +106,15 @@ novel-navbar-top:
 
 novel-html-self-contained:
   html:
-    command-line:
-      self-contained: true
+    self-contained: true
     sass:
       output-path: temp
 
 novel-widows:
   pdf:
-    template-variables:
-      header-includes:
-        - |
-          \widowpenalties=3 10000 10000 150
+    add-to-template:
+      - |
+        \widowpenalties=3 10000 10000 150
 
 Default:
   inherits: novel
