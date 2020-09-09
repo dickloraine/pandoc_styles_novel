@@ -169,4 +169,4 @@ def other(self):
 
 if __name__ == "__main__":
     run_transform_filter(["poem"], all_formats, other, latex=latex, html=html,
-                         filter_type=CodeBlock)
+                         filter_types=CodeBlock)
